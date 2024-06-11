@@ -4,6 +4,6 @@ Pour ce cours, nous devons crée une API REST et une API SOAP et RPC afin de pou
 
 Pour ceci, nous avons fais un diagramme de séquence qui est ci-dessous.
 
-![Texte alternatif](SchemaSequence.png "Schéma Séquance")
+![Texte alternatif](IMG/SchemaSequence.png "Schéma Séquance")
 
 By Randy, Théo, Ghislain, Paul.
