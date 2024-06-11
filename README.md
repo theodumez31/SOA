@@ -1,4 +1,4 @@
 # SOA
 
 
-By Randy, Théo, Ghislain, Paul
+By Randy, Théo, Ghislain, Paul.
