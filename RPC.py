@@ -11,3 +11,11 @@ with open("index-egalite-fh-utf8.csv", encoding='utf-8') as csv_file:
         # Stocker ou mettre à jour les données pour le SIREN donné
         if siren not in egapro_data or egapro_data[siren]["Année"] < row["Année"]:
             egapro_data[siren] = row
+
+# Créer un gestionnaire de requêtes XML-RPC personnalisé
+class RequestHandler(SimpleXMLRPCRequestHandler):
+    rpc_paths = ('/RPC2',)
+
+# Créer un serveur XML-RPC
+server = SimpleXMLRPCServer(("localhost", 8000), requestHandler=RequestHandler, allow_none=True)
+server.register_introspection_functions()
