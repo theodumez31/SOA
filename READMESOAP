@@ -1,0 +1,7 @@
+#CHANGES :
+#Update SOAP1&2 pour les addresses / variables manquantes & incorrectes, création du SOAP3
+#SOAP1&2 ont été inspirés d'exemples et tutos trouvés sur le net.
+#SOAP3 est inspiré des exemples du cours.
+
+# Méthode 1 éxécuter SOAP1 et SOAP2
+# Méthode 2 éxécuter SOAP3 tout seul
