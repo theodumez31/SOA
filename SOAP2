@@ -1,0 +1,26 @@
+import psycopg2
+ 
+# Établir une connexion à la base de données
+conn = psycopg2.connect(
+    dbname="mabdd",
+    user="user",
+    password="user",
+    host="localhost",
+    port="9090"
+)
+ 
+# Créer un curseur
+cur = conn.cursor()
+ 
+# Exécuter une requête SQL pour insérer des données
+cur.execute(
+    "INSERT INTO nom_de_la_table (colonne1, colonne2) VALUES (%s, %s)",
+    (valeur1, valeur2)
+)
+ 
+# Valider les modifications
+conn.commit()
+ 
+# Fermer la connexion
+cur.close()
+conn.close()
