@@ -4,7 +4,7 @@ Pour ce cours, nous devons crée une API REST et une API SOAP et RPC afin de pou
 
 Pour ceci, nous avons fais un diagramme de séquence qui est ci-dessous.
 
-![Texte alternatif](IMG/SchemaSequence.png "Schéma Séquance")
+![Texte alternatif](IMG/Schema.png "Schéma Séquance")
 
 
 La machine virtuelle n'a pas pu être configurée à temps.
