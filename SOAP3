@@ -1,0 +1,26 @@
+import asyncio
+
+import bleak
+
+from werkzeug.serving import run_simple
+from werkzeug.wrappers import Request, Response
+
+egapro_data = {}
+
+with open("index-egalite-fh-utf8.csv") as csv:
+    reader = DictReader(csv, delimiter=";", quotechar='"')
+    for row in reader:
+        if egapro_data.get(row["SIREN"]) is None:
+            egapro_data[row["SIREN"]] = row
+        elif egapro_data[row["SIREN"]]["Année"] < row["Année"]:
+            egapro_data[row["SIREN"]].update(row)
+
+def application(request):
+    """
+    The Werkzeug HTTP server will call this function whenever a request is
+    received. The request is a JSON-RPC request, which is parsed and
+    dispatched to the appropriate method.
+
+       :param request: The HTTP request object
+       :return: A JSON response
+    """

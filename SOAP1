@@ -1,11 +1,9 @@
 from zeep import Client
  
 # Créez une instance du client SOAP
-client = Client('URL_DU_WSDL')
+client = Client('127.0.0.1')
  
 # Appelez la méthode de l'API SOAP pour obtenir les données
 response = client.service.NomDeLaMethode(param1="valeur1", param2="valeur2")
  
-# Ici, vous pouvez traiter la réponse et stocker les données dans votre base de données.
-# Assurez-vous de remplacer 'URL_DU_WSDL', 'NomDeLaMethode', 'param1', 'valeur1', etc.
-# par les valeurs appropriées pour l'API EgaPro.
+# traite la réponse et stocke les données dans la base de données.
